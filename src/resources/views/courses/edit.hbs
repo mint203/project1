@@ -1,0 +1,31 @@
+{{!--From Sửa Khoá Học --}}
+<div class="from-insert mt-4">
+    <form class="insert" method="post" action="/courses/{{course._id}}?_method=PUT">
+        {{!-- Mô tả--}}
+        <div class="mb-3">
+            <label for="name" class="form-label">Tên khoá học </label>
+            <input class="in-insert" type="text" class="form-control"  value="{{course.name}}" id="name" name="name" placeholder="Tên khoá học">
+        </div>
+        {{!-- Mô tả--}}
+        <div class="mb-3">
+            <label for="description" class="form-label">Mô tả </label>
+            <input class="in-insert" type="text" class="form-control" value="{{course.description}}" id="description" name="description" placeholder="Mô tả">
+        </div>
+        {{!-- Mô tả--}}
+        <div class="mb-3">
+            <label for="videoID" class="form-label">Video </label>
+            <input class="in-insert" type="text" class="form-control" value="{{course.videoID}}" id="videoID" name="videoID" placeholder="Link video">
+        </div>
+        {{!-- Mô tả--}}
+        <div class="mb-3">
+            <label for="image" class="form-label">Hình ảnh </label>
+            <input class="in-insert" type="text" class="form-control" value="{{course.image}}" id="image" name="image" placeholder="Link hình ảnh">
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Giá khoá học </label>
+            <input class="in-insert" type="text" class="form-control" value="{{course.courseprice}}" id="courseprice" name="courseprice" placeholder="Giá khoá học">
+        </div>
+        <button type="submit" class="btn btn-header">Lưu</button>
+    </form>
+</div>

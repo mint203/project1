@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+
+<div class="signup-from">
+<form action="/login" method="post">
+
+        <h2>Đăng Nhập</h2>
+        <input placeholder="Name" name="name" type="text">
+        <br>
+        <input placeholder="Password" name="password" type="password">
+        <br>
+        {{!-- <input class="btn_signup" class="sub" type="submit" > --}}
+        <button class="btn_signup" type="submit">Đăng Nhập</button>
+        <h3 class="login-link-lv1">Bạn chưa có tài khoản ?</h3>
+        <a class="login-link-lv1" href="/signup">Tạo tài khoản.</a>
+    </form>
+</div>
+    
+</body>
+</html>

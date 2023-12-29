@@ -1,0 +1,218 @@
+<div class="banner">
+    <div class="border_banner"> </div>
+    <h2> </h2>
+    <p></span></p>
+    <div class="border_banner"> </div>
+</div>
+
+
+{{!-- <div class="wrapper">
+    {{#each courses}}
+    <div class="card">
+        <h3 class="card-title">{{this.name}}</h3>
+        <img src="{{this.image}}" alt="">
+        <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+            piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        <button class="card-btn">READ MORE</button>
+    </div>
+    {{/each}}
+</div> --}}
+
+
+
+{{!--
+
+<head>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body class="wrapper_card">
+    {{#each courses}}
+    <div class="card_container_course">
+        <div class="card_header_course">
+            <img src="{{this.image}}" alt="card-image_course" class="card_image_course" />
+            <div class="favourite">
+                <span class="material-symbols-outlined wishlist">
+                    favorite
+                </span>
+            </div>
+        </div>
+        <div class="card_body">
+            <p>Makeup Products special offer</p>
+            <p class="price">Price:&#8377; 999</p>
+        </div>
+        <div class="card_footer">
+            <div>
+                <span class="material-symbols-outlined                  review-icon">star</span>
+                <span class="material-symbols-outlined review-icon">star</span>
+                <span class="material-symbols-outlined review-icon">star</span>
+                <span class="material-symbols-outlined review-icon">star</span>
+                <span class="material-symbols-outlined review-icon-empty">
+                    grade
+                </span>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</body>
+
+</html> --}}
+
+<h2 class="info">Khoá học phổ biến</h2>
+
+
+<div class="grid-row">
+    {{#each courses}}
+    <div class="product">
+        <div class="product--card">
+            <a class="product--image" href="/courses/{{this.slug}}" title="View">
+                <img class="img-responsive" src="{{this.image}}">
+                <span class="tags"></span>
+            </a>
+            {{!-- <div class="product--brand">
+                <a href="#" title="View">Khoá Học</a>
+            </div> --}}
+            <a class="product--title" href="#" title="View">{{this.name}}</a>
+            
+            <a class="product--price" href="#" title="View">
+                <span class="product--price-inner">
+                    <div class="price--rrp"></div>
+                    <div class="price--sell-price">{{this.courseprice}}</div>
+                </span>
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<h2 class="info">Bài viết nổi bật</h2>
+
+<div class="grid-row">
+    <div class="product">
+        <div class="product--card">
+            <a class="product--image" href="" title="View">
+                <img class="img-responsive" src="https://files.fullstack.edu.vn/f8-prod/blog_posts/273/61403b0bbef89.png">
+                <span class="tags"></span>
+            </a>
+            {{!-- <div class="product--brand">
+                <a href="#" title="View">Khoá Học</a>
+            </div> --}}
+            <a class="product--title" href="#" title="View"><b>Tài liệu tự học tiếng anh cơ bản.</b></a>
+            <a class="product--price" href="#" title="View">
+                <span class="product--price-inner">
+                    <div class="price--rrp"></div>
+                    <div class="price--sell-price"></div>
+                </span>
+            </a>
+        </div>
+    </div>
+
+
+    {{!-- item 2 --}}
+
+    <div class="product">
+        <div class="product--card">
+            <a class="product--image" href="" title="View">
+                <img class="img-responsive" src="https://files.fullstack.edu.vn/f8-prod/blog_posts/273/61403b0bbef89.png">
+                <span class="tags"></span>
+            </a>
+            {{!-- <div class="product--brand">
+                <a href="#" title="View">Khoá Học</a>
+            </div> --}}
+            <a class="product--title" href="#" title="View"><b>Tài liệu tự học tiếng anh cơ bản.</b></a>
+            <a class="product--price" href="#" title="View">
+                <span class="product--price-inner">
+                    <div class="price--rrp"></div>
+                    <div class="price--sell-price"></div>
+                </span>
+            </a>
+        </div>
+    </div>
+
+    {{!-- item 3 --}}
+
+    <div class="product">
+        <div class="product--card">
+            <a class="product--image" href="" title="View">
+                <img class="img-responsive" src="https://files.fullstack.edu.vn/f8-prod/blog_posts/273/61403b0bbef89.png">
+                <span class="tags"></span>
+            </a>
+            {{!-- <div class="product--brand">
+                <a href="#" title="View">Khoá Học</a>
+            </div> --}}
+            <a class="product--title" href="#" title="View"><b>Tài liệu tự học tiếng anh cơ bản.</b></a>
+            <a class="product--price" href="#" title="View">
+                <span class="product--price-inner">
+                    <div class="price--rrp"></div>
+                    <div class="price--sell-price"></div>
+                </span>
+            </a>
+        </div>
+    </div>
+
+    {{!-- item 4 --}}
+
+    <div class="product">
+        <div class="product--card">
+            <a class="product--image" href="" title="View">
+                <img class="img-responsive" src="https://files.fullstack.edu.vn/f8-prod/blog_posts/273/61403b0bbef89.png">
+                <span class="tags"></span>
+            </a>
+            {{!-- <div class="product--brand">
+                <a href="#" title="View">Khoá Học</a>
+            </div> --}}
+            <a class="product--title" href="#" title="View"><b>Tài liệu tự học tiếng anh cơ bản.</b></a>
+            <a class="product--price" href="#" title="View">
+                <span class="product--price-inner">
+                    <div class="price--rrp"></div>
+                    <div class="price--sell-price"></div>
+                </span>
+            </a>
+        </div>
+    </div>
+
+    {{!-- item 5 --}}
+
+    <div class="product">
+        <div class="product--card">
+            <a class="product--image" href="" title="View">
+                <img class="img-responsive" src="https://files.fullstack.edu.vn/f8-prod/blog_posts/273/61403b0bbef89.png">
+                <span class="tags"></span>
+            </a>
+            {{!-- <div class="product--brand">
+                <a href="#" title="View">Khoá Học</a>
+            </div> --}}
+            <a class="product--title" href="#" title="View"><b>Tài liệu tự học tiếng anh cơ bản.</b></a>
+            <a class="product--price" href="#" title="View">
+                <span class="product--price-inner">
+                    <div class="price--rrp"></div>
+                    <div class="price--sell-price"></div>
+                </span>
+            </a>
+        </div>
+    </div>
+
+    {{!-- item 6 --}}
+    <div class="product">
+        <div class="product--card">
+            <a class="product--image" href="" title="View">
+                <img class="img-responsive" src="https://files.fullstack.edu.vn/f8-prod/blog_posts/273/61403b0bbef89.png">
+                <span class="tags"></span>
+            </a>
+            {{!-- <div class="product--brand">
+                <a href="#" title="View">Khoá Học</a>
+            </div> --}}
+            <a class="product--title" href="#" title="View"><b>Tài liệu tự học tiếng anh cơ bản.</b></a>
+            <a class="product--price" href="#" title="View">
+                <span class="product--price-inner">
+                    <div class="price--rrp"></div>
+                    <div class="price--sell-price"></div>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+

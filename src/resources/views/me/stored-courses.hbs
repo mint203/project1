@@ -1,0 +1,92 @@
+
+<div class="mt-4 list-course">
+  <h3><b>Danh Sách Khoá Học</b></h3>
+
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Hình Ảnh</th>
+        <th scope="col">Khoá Học</th>
+        <th scope="col">Mô Tả</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Thời gian tạo</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each courses}}
+      <tr>
+        
+        <th scope="row">{{@index}}</th>
+        <td> <a href="/courses/{{this.slug}}"><img src="{{this.image}}" class="card-img-top" alt="{{this.name}}" style="width: 100px; height: 60px;">
+        </td></a>
+        <td>{{this.name}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.courseprice}}</td>
+        <td>{{this.createdAt}}</td>
+         
+        <td>
+          <div class="btn-container">
+            <a href="/courses/{{this._id}}/edit" class="btn btn-success btn-edit-del">Sửa</a>
+            <a href="" class="btn btn-danger btn-edit-del" data-toggle="modal" data-id="{{this._id}}"
+              data-target="#delete-course-modal">Xoá</a>
+          </div>
+
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <a href="/courses/create" class="btn-header  ml-auto"><b>Thêm </b></a>
+</div>
+
+
+
+
+
+
+{{!-- Delete cf --}}
+<div>
+
+<div id="delete-course-modal" class="modal modal-cf" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><b style="font-size: larger;">Xoá Khoá Học</b></h5>
+      </div>
+      <div class="modal-body">
+        <p>Bạn chắc chắn muốn xoá không?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Đóng</button>
+        <button id="btn-delete-course" type="button" class="btn btn-danger">Xoá</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+{{!-- delete from --}}
+
+<form name="delete-course-from" method="post"></form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var courseId;
+    var deleteFrom = document.forms['delete-course-from']
+    $('#delete-course-modal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget);
+      courseId = button.data('id');
+
+    })
+
+    var bntDeleteCourse = document.getElementById('btn-delete-course')
+    bntDeleteCourse.onclick = function () {
+      deleteFrom.action = '/courses/' + courseId + '?_method=DELETE'
+      deleteFrom.submit()
+    }
+  })
+</script>
